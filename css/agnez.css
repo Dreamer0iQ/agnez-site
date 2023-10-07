@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap%27');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    scroll-behavior: smooth;
+  }  
+
+  body {
+    background: #ffffff;
+    background-size: cover;
+    text-align: center;
+    color: rgb(32, 26, 26);
+    height: 100vh;
+    background-attachment: fixed;
+  }
+
+#headerfikt {
+    background-color: rgb(14, 13, 13);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: 1s all;
+    z-index: 1;
+}
+
+#header {
+    background-color: rgb(48, 48, 48);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: 1s all;
+    z-index: 11;
+    box-shadow: 10px 0px 10px rgb(255, 161, 53);
+    cursor: pointer;
+}
+
+#agnez {
+    background-image: url(../images/obrezsvg.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+}
+
+#main {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+
+#about {
+    width: 100%;
+    height: auto;
+    display: grid;
+    font-size: 40px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 4fr 5fr;
+    justify-items: center;
+}
+
+#portret {
+    background-image: url(../images/portret.jpg);
+    width: 400px;
+    height: 500px;
+    background-size: cover;
+    border-radius: 5%;
+    opacity: 85%;
+    display: flex;
+    position: relative;
+    margin-left: 10%;
+    align-self: center;
+    box-shadow: 0 0 10px 5px rgba(54, 54, 54, 0.445);
+}
+
+#opis {
+    width: 90%;
+    justify-content: center;
+    justify-self: left;
+}
+#opis1 {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+.title {
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.title1 {
+    height: 15vh;
+    display: block;
+    position: relative;
+}
+
+#footer {
+    height: auto;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#undopis {
+    height: 15vh;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 3%;
+    margin-bottom: 20px;
+}     
+    
+#link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 1s;
+}
+
+#link:hover{
+    text-decoration: none;
+    color: rgb(255, 213, 96);
+    transition: 1s;
+}
+
+#block {
+    display: block;
+    width: 55%;
+}
+
+h6 {
+    font-weight: normal;
+}
+
+.imageprod img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    transition: 1s all;
+}
+
+.imageprod img:hover {
+    transform: scale(1.05);
+}
+
+.imageprod {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 5%;
+    box-shadow: 0 0 10px 5px rgba(83, 83, 83, 0.445);
+    transition: 1s all;
+}
+
+.imageprod:hover {
+    box-shadow: 0 0 10px 10px rgba(255, 207, 136, 0.74);
+    transition: 1s all;
+}
+
+.product {
+    width: 300px;
+    height: auto;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.col-md-4 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+#jewelry_all {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+
+.info h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.aboutjewelry {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.price {
+    font-size: 22px;
+}
+.col-md-5 {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#InStock {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.col-md-5:last-child .product:last-child {
+    margin-bottom: 0%;
+}
+
+
+
+@media (max-width: 1550px) {
+    .col-md-4   {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .col-md-5   {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+    .col-md-5 .product:last-child   {
+        grid-column-start: 1;
+        grid-column-end: 3;    
+    }
+
+    .title1 {
+        height: 7VH;
+    }
+
+    #undopis {
+        height: 10vh;
+    }
+}
+
+@media (max-width: 1350px) {
+    #portret {
+        margin-left: 0%;
+        width: 300px;
+        height: 400px;
+    }
+    #opis {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-device-width: 900px) {
+    #opis {
+        font-size: 25px;
+    }
+}
+
+@media (orientation: portrait) and (max-device-width: 700px) {
+    #about {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    #portret {
+        margin-left: 0%;
+        width: 400px;
+        height: 500px;
+        margin-bottom: 25px;
+    }
+    #opis {
+        justify-self: center;
+        font-size: 50px;
+    }
+
+    .product {
+        width: 380px;
+    }
+
+    .imageprod {
+        height: 380px;
+        width: 380px;
+    }
+
+    .imageprod img {
+        height: 380px;
+        width: 380px;
+    }
+
+    .info h3 {
+        font-size: 38px;
+    }
+    
+    
+    .aboutjewelry {
+        font-size: 30px;
+    }
+
+    .price {
+        font-size: 34px;
+    }
+
+    #undopis {
+        font-size: 55px;
+    }     
+
+    #block {
+        width: 70%;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+}
