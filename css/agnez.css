@@ -34,7 +34,7 @@
 }
 
 #agnez {
-    background-image: url(../images/obrezsvg.svg);
+    background-image: url(../images/logoyobrez.svg);
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -226,7 +226,98 @@ h6 {
     margin-bottom: 0%;
 }
 
+.modal {
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: rgba(0, 0, 0, .3);
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .6s, visibility .6s;
+}
 
+.modal_box {
+    max-width: 1200px;
+    padding: 45px;
+    z-index: 1;
+    background-color: #ffffff;
+    margin: 30px 15px;
+    box-shadow: 0px 0px 29px 16px rgba(118, 99, 62, 0.2);
+    opacity: 1;
+    position: relative;
+    border-radius: 10px;
+}
+
+.modal_box h2{
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.modal_box p{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: #464646;
+}
+
+.modal_box h6{
+    font-size: 27px;
+    color: #464646;
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.mod-image {
+    height: 500px;
+    width: 500px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgba(83, 83, 83, 0.445);
+}
+
+.mod-image img {
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+}
+
+.mod-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.mod-opis {
+    text-align: left;
+    padding-left: 5%;
+}
+
+.mod-prise {
+    font-size: 45px;
+    margin-bottom: 60px;
+    color: #000000;
+    font-weight: 500;
+}
 
 @media (max-width: 1550px) {
     .col-md-4   {
@@ -267,6 +358,44 @@ h6 {
 @media (max-device-width: 900px) {
     #opis {
         font-size: 25px;
+    }
+    .mod-image {
+        height: 350px;
+        width: 350px;
+    }
+
+    .mod-image img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 900px) {
+    .mod-image {
+        height: 400px;
+        width: 400px;
+    }
+
+    .mod-image img {
+        height: 400px;
+        width: 400px;
+    }
+
+    .mod-prise {
+        font-size: 35px;
+    }
+
+    .modal_box h2{
+        font-size: 40px;
+    }
+    
+    .modal_box p{
+        font-size: 23px;
+    }
+    
+    .modal_box h6{
+        font-size: 23px;
+        color: #464646;
     }
 }
 
@@ -324,9 +453,44 @@ h6 {
     .title {
         font-size: 30px;
     }
+
+    .mod-grid{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .mod-image {
+        height: 500px;
+        width: 500px;
+        margin-bottom: 30px;
+    }
+
+    .mod-image img {
+        height: 500px;
+        width: 500px;
+    }
+
+    .mod-opis {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .mod-prise {
+        margin-bottom: 20px;
+    }
+
+    .modal_box h2{
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
     
+    .modal_box p{
+        font-size: 33px;
+        margin-bottom: 30px;
+    }
     
-  .title1 {
-        margin-bottom: 15px;
-  }
+    .modal_box h6{
+        font-size: 30px;
+        color: #464646;
+    }
 }
