@@ -34,7 +34,7 @@
 }
 
 #agnez {
-    background-image: url(../images/obrezsvg.svg);
+    background-image: url(../images/logoyobrez.svg);
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -186,7 +186,7 @@ h6 {
 .col-md-4 {
     display: grid;
     justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+
     justify-items: center;
 }
 
@@ -213,7 +213,18 @@ h6 {
 .col-md-5 {
     display: grid;
     justify-items: center;
+}
+.four-products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.three-products {
     grid-template-columns: 1fr 1fr 1fr;
+}
+.two-products {
+    grid-template-columns: 1fr 1fr;
+}
+.one-products {
+    grid-template-columns: 1fr;
 }
 
 #InStock {
@@ -240,7 +251,7 @@ h6 {
     overflow-y: auto;
     visibility: hidden;
     opacity: 0;
-    transition: opacity .6s, visibility .6s;
+    transition: opacity .4s, visibility .4s;
 }
 
 .modal_box {
@@ -324,14 +335,21 @@ h6 {
         grid-template-columns: 1fr 1fr;
     }
 
-    .col-md-5   {
+    .four-products  {
         grid-template-columns: 1fr 1fr;
     }
-
-    
-    .col-md-5 .product:last-child   {
+    .three-products  {
+        grid-template-columns: 1fr 1fr;
+    }
+    .three-products .product:last-child   {
         grid-column-start: 1;
         grid-column-end: 3;    
+    }
+    .two-products  {
+        grid-template-columns: 1fr 1fr;
+    }
+    .one-products  {
+        grid-template-columns: 1fr;
     }
 
     .title1 {
