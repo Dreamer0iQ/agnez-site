@@ -19,8 +19,17 @@ function ScrollUp() {
     const scrollHeightY = elem.offsetHeight
     scrollTo(0, scrollHeightY)
 }
+let sum_elem_strochka = 0
+let dexp1 = document.getElementsByClassName('col-md-4').length
+for (let i =1; i < dexp1+1; i++){
+	sum_elem_strochka = document.getElementById(`strochka_${i}`).childElementCount + sum_elem_strochka
+}
 
-
+let sum_elem_stroka = 0
+let dexp2 = document.getElementsByClassName('col-md-5').length
+for (let i =1; i < dexp2+1; i++){
+	sum_elem_stroka = document.getElementById(`stroka_${i}`).childElementCount + sum_elem_stroka
+}
 
 let box1 = document.getElementsByClassName('col-md-5').length
 for (let i =1; i < box1+1; i++){
@@ -57,8 +66,7 @@ for (let i =1; i < dexp+1; i++){
 }
 
 
-const stock = document.getElementById('InStock')
-for (let i =1; i < stock.childNodes.length*box1*2; i++){
+for (let i =1; i < sum_elem_stroka+1; i++){
 	document.getElementById(`open_mod_${i}`).addEventListener("click", function() {
 		document.getElementById(`mod`).classList.add("open")
 		let image = document.querySelector(`#open_mod_${i} .imageprod`).innerHTML
@@ -70,6 +78,7 @@ for (let i =1; i < stock.childNodes.length*box1*2; i++){
 		document.querySelector(`#mod .mod-prise`).innerHTML = price
 		document.querySelector(`#mod .mod-opis > p`).innerHTML = about
 		body.style.overflow = 'hidden'
+		console.log(document.getElementById('jewelry_all').childElementCount)
 	})
 
 	window.addEventListener('keydown', (e) => {
@@ -93,8 +102,7 @@ for (let i =1; i < stock.childNodes.length*box1*2; i++){
 	})	
 }
 
-const stock2 = document.getElementById('jewelry_all').childElementCount
-for (let i =1; i < stock2*box2*3; i++){
+for (let i =1; i < sum_elem_strochka+1; i++){
 	document.getElementById(`openmod_${i}`).addEventListener("click", function() {
 		document.getElementById(`mod`).classList.add("open")
 		let image = document.querySelector(`#openmod_${i} .imageprod`).innerHTML
@@ -128,3 +136,4 @@ for (let i =1; i < stock2*box2*3; i++){
 		body.style.overflow = 'scroll';
 	})	
 }
+
