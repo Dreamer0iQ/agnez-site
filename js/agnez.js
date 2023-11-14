@@ -19,54 +19,13 @@ function ScrollUp() {
     const scrollHeightY = elem.offsetHeight
     scrollTo(0, scrollHeightY)
 }
-let sum_elem_strochka = 0
-let dexp1 = document.getElementsByClassName('col-md-4').length
-for (let i =1; i < dexp1+1; i++){
-	sum_elem_strochka = document.getElementById(`strochka_${i}`).childElementCount + sum_elem_strochka
-}
-
-let sum_elem_stroka = 0
-let dexp2 = document.getElementsByClassName('col-md-5').length
-for (let i =1; i < dexp2+1; i++){
-	sum_elem_stroka = document.getElementById(`stroka_${i}`).childElementCount + sum_elem_stroka
-}
-
-let box1 = document.getElementsByClassName('col-md-5').length
-for (let i =1; i < box1+1; i++){
-	children = document.getElementById(`stroka_${i}`).childElementCount
-	if ((children) === 4) {
-		document.getElementById(`stroka_${i}`).classList.add("four-products")
-	}
-	if ((children) === 3) {
-		document.getElementById(`stroka_${i}`).classList.add("three-products")
-	}
-	if ((children) === 2) {
-		document.getElementById(`stroka_${i}`).classList.add("two-products")
-	}
-	if ((children) === 1) {
-		document.getElementById(`stroka_${i}`).classList.add("one-products")
-	}
-}
-
-let dexp = document.getElementsByClassName('col-md-4').length
-for (let i =1; i < dexp+1; i++){
-	children1 = document.getElementById(`strochka_${i}`).childElementCount
-	if ((children1) === 4) {
-		document.getElementById(`strochka_${i}`).classList.add("four-products")
-	}
-	if ((children1) === 3) {
-		document.getElementById(`strochka_${i}`).classList.add("three-products")
-	}
-	if ((children1) === 2) {
-		document.getElementById(`strochka_${i}`).classList.add("two-products")
-	}
-	if ((children1) === 1) {
-		document.getElementById(`strochka_${i}`).classList.add("one-products")
-	}
-}
 
 
-for (let i =1; i < sum_elem_stroka+1; i++){
+sum_elem_strochki = document.getElementById(`strochki`).childElementCount
+sum_elem_stroki = document.getElementById(`stroki`).childElementCount
+
+
+for (let i =1; i < sum_elem_stroki+1; i++){
 	document.getElementById(`open_mod_${i}`).addEventListener("click", function() {
 		document.getElementById(`mod`).classList.add("open")
 		let image = document.querySelector(`#open_mod_${i} .imageprod`).innerHTML
@@ -102,7 +61,7 @@ for (let i =1; i < sum_elem_stroka+1; i++){
 	})	
 }
 
-for (let i =1; i < sum_elem_strochka+1; i++){
+for (let i =1; i < sum_elem_strochki+1; i++){
 	document.getElementById(`openmod_${i}`).addEventListener("click", function() {
 		document.getElementById(`mod`).classList.add("open")
 		let image = document.querySelector(`#openmod_${i} .imageprod`).innerHTML
@@ -137,3 +96,30 @@ for (let i =1; i < sum_elem_strochka+1; i++){
 	})	
 }
 
+function filterSelection(category) {
+    var products = document.getElementsByClassName('product');
+    for (var i = 0; i < products.length; i++) {
+		if (products[i].getAttribute('data-category').slice(-2) === category.slice(-2)) {
+			hideProduct(products[i]);
+		}
+		if (products[i].getAttribute('data-category').indexOf(category) > -1) {
+			showProduct(products[i]);
+      	}
+		if ((category === 'all_IS') || (category === 'all_JA')) {
+			if (products[i].getAttribute('data-category').slice(-2) === category.slice(-2)) {
+				showProduct(products[i]);
+			}
+		}
+    }
+  }
+  
+  function hideProduct(element) {
+    element.classList.add('hide');
+    element.classList.remove('show');
+  }
+  
+  function showProduct(element) {
+    element.classList.add('show');
+    element.classList.remove('hide');
+  }
+  
