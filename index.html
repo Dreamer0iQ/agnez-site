@@ -26,8 +26,15 @@
         </div>
       </div>
         <div id="InStock">
-          <div class="col-md-5" id="stroka_1">
-            <div class="product" id="open_mod_1">
+          <div class="buttons_modul">
+            <div>
+              <button class="buttons" onclick="filterSelection('all_IS')">Все</button>
+              <button class="buttons" onclick="filterSelection('браслет_IS')">Браслеты</button>
+              <button class="buttons" onclick="filterSelection('колье_IS')">Колья</button>
+            </div>
+          </div>
+          <div class="col-md-5" id="stroki">
+            <div class="product" id="open_mod_1" data-category="браслет_IS">
               <div class="imageprod">
                 <img src="https://media.discordapp.net/attachments/723044740416929862/1159882422620532818/IMG_0399.jpg?ex=6532a3af&is=65202eaf&hm=862ba2c38e1c607315b83fd0c685c3cbdae573a41bfaa03456189135c8feab93&=&width=732&height=732">
               </div>
@@ -43,7 +50,7 @@
             </div>
 
 
-            <div class="product" id="open_mod_2">
+            <div class="product" id="open_mod_2" data-category="браслет_IS">
               <div class="imageprod">
                 <img src="https://media.discordapp.net/attachments/723044740416929862/1159882432019976353/IMG_0398.jpg?ex=6532a3b1&is=65202eb1&hm=4e9b9d8315a4c0a3b68b346c00beebb77efb4b9ee61e922b8d0011a36dad53ce&=&width=732&height=732">
               </div>
@@ -59,7 +66,7 @@
             </div>
 
 
-            <div class="product" id="open_mod_3">
+            <div class="product" id="open_mod_3" data-category="колье_IS">
               <div class="imageprod">
                 <img src="https://media.discordapp.net/attachments/723044740416929862/1163486586764267621/IMG_0498.jpg?ex=653fc052&is=652d4b52&hm=2c38633aa2cca8baeb769115bb3b0e1a5dfa121e24bfea776becfbd8005d489b&=&width=507&height=507">
               </div>
@@ -74,7 +81,7 @@
               </div>
             </div>
 
-            <div class="product" id="open_mod_4">
+            <div class="product" id="open_mod_4" data-category="браслет_IS">
               <div class="imageprod">
                 <img src="https://media.discordapp.net/attachments/723044740416929862/1163486586059620435/IMG_0500.jpg?ex=653fc052&is=652d4b52&hm=cba6d44c98292a3be7f3c4a5de109534450dec1de14343ff7193b3093bb51e4d&=&width=507&height=507">
               </div>
@@ -89,10 +96,7 @@
               </div>
             </div>
 
-          </div>
-
-          <div class="col-md-5" id="stroka_2">
-            <div class="product" id="open_mod_5">
+            <div class="product" id="open_mod_5" data-category="браслет_IS">
               <div class="imageprod">
                 <img src="https://media.discordapp.net/attachments/723044740416929862/1163486585296273518/IMG_0502.jpg?ex=653fc052&is=652d4b52&hm=c0b9a6c63b79df9c03d56b276714bf162a6029dca51fe5a27bf3e9da9b2798f6&=&width=507&height=507">
               </div>
@@ -107,8 +111,7 @@
               </div>
             </div>
 
-
-            <div class="product" id="open_mod_6">
+            <div class="product" id="open_mod_6" data-category="браслет_IS">
               <div class="imageprod">
                 <img src="https://media.discordapp.net/attachments/723044740416929862/1163486586386792561/IMG_0499.jpg?ex=653fc052&is=652d4b52&hm=16ef3f1798ff1bf7f4d5f2e0f71e27fc8c0040e5f1ba5540394bbe14f294228a&=&width=507&height=507">
               </div>
@@ -123,8 +126,7 @@
               </div>
             </div>
 
-
-            <div class="product" id="open_mod_7">
+            <div class="product" id="open_mod_7" data-category="браслет_IS" >
               <div class="imageprod">
                 <img src="https://media.discordapp.net/attachments/723044740416929862/1163486585652776960/IMG_0501.jpg?ex=653fc052&is=652d4b52&hm=87c4ff4dd3d0932b0a05d8451751cf62b9fdced4542de90b74f94c56f826ca6e&=&width=507&height=507">
               </div>
@@ -138,7 +140,6 @@
                 </div>
               </div>
             </div>
-
           </div>
 
 
@@ -148,9 +149,18 @@
           <h1>— Галерея работ  —</h1>
         </div>
       </div>
+
         <div id="jewelry_all">
-          <div class="col-md-4" id="strochka_1">
-            <div class="product" id="openmod_1">
+          <div class="buttons_modul">
+            <div>
+              <button class="buttons" onclick="filterSelection('all_JA')">Все</button>
+              <button class="buttons" onclick="filterSelection('браслет_JA')">Браслеты</button>
+              <button class="buttons" onclick="filterSelection('колье_JA')">Колья</button>
+              <button class="buttons" onclick="filterSelection('ожерелье_JA')">Ожерелья</button>
+            </div>
+          </div>
+          <div class="col-md-4" id="strochki">
+            <div class="product" id="openmod_1" data-category="браслет_JA">
               <div class="imageprod">
                 <img src="https://manika.com.ua/wp-content/uploads/2020/02/1283--scaled.jpg">
               </div>
@@ -164,7 +174,7 @@
                 </div>
               </div>
             </div>
-            <div class="product" id="openmod_2">
+            <div class="product" id="openmod_2" data-category="колье_JA">
               <div class="imageprod">
                 <img src="https://media.discordapp.net/attachments/723044740416929862/1159882449027870720/IMG_0396.jpg?ex=6532a3b5&is=65202eb5&hm=f6793a67ab57b246d5caaa919e65d753624d4bf1f2fa37ae30add4f6c64f8cb1&=&width=732&height=732">
               </div>
@@ -178,7 +188,7 @@
                 </div>
               </div>
             </div>
-            <div class="product" id="openmod_3">
+            <div class="product" id="openmod_3" data-category="колье_JA">
               <div class="imageprod">
                 <img src="https://respectjewel.ru/upload/resize_cache/iblock/ce2/1200_1200_140cd750bba9870f18aada2478b24840a/jmiiv3yjl9tz1hfb4ibx2xzfhciozn6n.jpg">
               </div>
@@ -192,7 +202,7 @@
                 </div>
               </div>
             </div>
-            <div class="product" id="openmod_4">
+            <div class="product" id="openmod_4" data-category="ожерелье_JA">
               <div class="imageprod">
                 <img src="https://luxebiju.ru/upload/iblock/f9a/vc3sxrrv2cylxzjzvuyxp4mnhudco22q/LZ-23.03-077-1_goluboj.jpg">
               </div>
@@ -206,9 +216,8 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4" id="strochka_2">
-            <div class="product" id="openmod_5">
+
+            <div class="product" id="openmod_5" data-category="колье_JA">
               <div class="imageprod">
                 <img src="https://luxebiju.ru/upload/iblock/c10/xwyp3vl7ynx7h3as3vrszwerowagoihq/LZ-23.01-023.jpg">
               </div>
@@ -222,7 +231,7 @@
                 </div>
               </div>
             </div>
-            <div class="product" id="openmod_6">
+            <div class="product" id="openmod_6" data-category="колье_JA">
               <div class="imageprod">
                 <img src="https://luxebiju.ru/upload/iblock/eb9/pivbjbbjf17jstavf4r2hbyd14ofcdro/LZ-22.11-426.jpg">
               </div>
@@ -236,7 +245,7 @@
                 </div>
               </div>
             </div>
-            <div class="product" id="openmod_7">
+            <div class="product" id="openmod_7" data-category="браслет_JA">
               <div class="imageprod">
                 <img src="https://media.discordapp.net/attachments/723044740416929862/1159883061354311851/IMG_0386.jpg?ex=6532a447&is=65202f47&hm=3ed075fcf6855f9d7b5670f4e5ecb0700847ae8a467b9d7bbeaad84393d27fc3&=&width=732&height=732">
               </div>
@@ -250,7 +259,7 @@
                 </div>
               </div>
             </div>
-            <div class="product" id="openmod_8">
+            <div class="product" id="openmod_8" data-category="браслет_JA">
               <div class="imageprod">
                 <img src="https://mylis.ru/wp-content/uploads/2022/03/35-2.jpg">
               </div>
